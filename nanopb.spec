@@ -6,14 +6,14 @@
 
 Summary:	A plain-C implementation of Google's Protocol Buffers data format
 Name:		nanopb
-Version:	0.4.9
+Version:	0.4.9.1
 Release:	1
 License:	Zlib
 Group:		System/Libraries
 URL:		https://jpa.kapsi.fi/nanopb/
 Source0:	https://github.com/nanopb/nanopb/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake ninja
-BuildRequires:	cmake(protobuf)
+BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(poetry)
@@ -111,8 +111,6 @@ cd ..
 %install
 %ninja_install -C build
 %py_install
-
-#pyproject_save_files nanopb
 
 %if %{with check}
 %check
