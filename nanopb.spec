@@ -7,7 +7,7 @@
 Summary:	A plain-C implementation of Google's Protocol Buffers data format
 Name:		nanopb
 Version:	0.4.9.1
-Release:	1
+Release:	2
 License:	Zlib
 Group:		System/Libraries
 URL:		https://jpa.kapsi.fi/nanopb/
